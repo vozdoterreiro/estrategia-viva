@@ -398,20 +398,54 @@ function Diagnostico() {
 
 function Arquitetura() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <Link to="/jornadas" className="text-secondary hover:text-secondary-dark mb-6 inline-block">
+        <div className="max-w-5xl mx-auto">
+          <Link to="/jornadas" className="text-secondary hover:text-secondary-dark mb-6 inline-block font-semibold">
             ← Voltar para Jornadas
           </Link>
           
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">
-            🏛️ Arquitetura de Ecossistema
-          </h1>
-          
-          <p className="text-xl text-muted-foreground mb-12">
-            Desenhe o futuro organizacional que você deseja habitar
-          </p>
+          <div className="bg-gradient-to-br from-amber-600 to-amber-700 text-white rounded-2xl p-8 md:p-12 mb-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex-1">
+                <div className="mb-4">
+                  <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="32" fill="url(#arch-gradient)" opacity="0.2"/>
+                    <rect x="16" y="38" width="8" height="14" fill="white" opacity="0.9"/>
+                    <rect x="28" y="34" width="8" height="18" fill="white" opacity="0.9"/>
+                    <rect x="40" y="30" width="8" height="22" fill="white" opacity="0.9"/>
+                    <path d="M12 24L32 12L52 24" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.9"/>
+                    <line x1="12" y1="52" x2="52" y2="52" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.9"/>
+                    <defs>
+                      <linearGradient id="arch-gradient" x1="0" y1="0" x2="64" y2="64">
+                        <stop offset="0%" stopColor="#ffffff" stopOpacity="0.3"/>
+                        <stop offset="100%" stopColor="#ffffff" stopOpacity="0.1"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4">
+                  Arquitetura de Ecossistema
+                </h1>
+                <p className="text-xl opacity-90 mb-4">
+                  Design Organizacional Sistêmico
+                </p>
+                <p className="text-lg opacity-80">
+                  Desenhe o futuro organizacional que você deseja habitar
+                </p>
+              </div>
+              <div className="text-center md:text-right">
+                <div className="bg-white/10 backdrop-blur rounded-xl p-6">
+                  <span className="inline-block px-3 py-1 bg-amber-500 text-white text-xs font-bold rounded-full mb-3">
+                    1 projeto/trimestre
+                  </span>
+                  <p className="text-sm opacity-80 mb-2">Investimento</p>
+                  <p className="text-3xl font-bold mb-2">A partir de R$ 80k</p>
+                  <p className="text-sm opacity-80">⏱️ 3-6 meses</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="bg-white rounded-lg shadow-soft p-8 mb-8">
             <h2 className="text-2xl font-heading font-bold text-primary mb-4">O que é?</h2>
@@ -509,20 +543,55 @@ function Arquitetura() {
 
 function Cultivo() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <Link to="/jornadas" className="text-secondary hover:text-secondary-dark mb-6 inline-block">
+        <div className="max-w-5xl mx-auto">
+          <Link to="/jornadas" className="text-secondary hover:text-secondary-dark mb-6 inline-block font-semibold">
             ← Voltar para Jornadas
           </Link>
           
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">
-            🌱 Ciclo de Cultivo
-          </h1>
-          
-          <p className="text-xl text-muted-foreground mb-12">
-            Cultive vitalidade organizacional de forma contínua e sustentável
-          </p>
+          <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 text-white rounded-2xl p-8 md:p-12 mb-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex-1">
+                <div className="mb-4">
+                  <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="32" fill="url(#plant-gradient)" opacity="0.2"/>
+                    <path d="M32 48V28" stroke="white" strokeWidth="3" strokeLinecap="round" opacity="0.9"/>
+                    <path d="M32 28C32 28 26 22 20 22C20 22 20 28 26 32" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.9"/>
+                    <path d="M32 28C32 28 38 22 44 22C44 22 44 28 38 32" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.9"/>
+                    <path d="M32 34C32 34 28 30 24 30C24 30 24 34 28 38" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.8"/>
+                    <path d="M32 34C32 34 36 30 40 30C40 30 40 34 36 38" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.8"/>
+                    <ellipse cx="32" cy="50" rx="8" ry="3" fill="white" opacity="0.6"/>
+                    <defs>
+                      <linearGradient id="plant-gradient" x1="0" y1="0" x2="64" y2="64">
+                        <stop offset="0%" stopColor="#ffffff" stopOpacity="0.3"/>
+                        <stop offset="100%" stopColor="#ffffff" stopOpacity="0.1"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4">
+                  Ciclo de Cultivo
+                </h1>
+                <p className="text-xl opacity-90 mb-4">
+                  Acompanhamento Contínuo de Vitalidade
+                </p>
+                <p className="text-lg opacity-80">
+                  Cultive vitalidade organizacional de forma contínua e sustentável
+                </p>
+              </div>
+              <div className="text-center md:text-right">
+                <div className="bg-white/10 backdrop-blur rounded-xl p-6">
+                  <span className="inline-block px-3 py-1 bg-emerald-500 text-white text-xs font-bold rounded-full mb-3">
+                    95% renovam
+                  </span>
+                  <p className="text-sm opacity-80 mb-2">Investimento</p>
+                  <p className="text-3xl font-bold mb-2">R$ 8k - R$ 25k/mês</p>
+                  <p className="text-sm opacity-80">🔄 Contínuo (mín. 6 meses)</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="bg-white rounded-lg shadow-soft p-8 mb-8">
             <h2 className="text-2xl font-heading font-bold text-primary mb-4">O que é?</h2>

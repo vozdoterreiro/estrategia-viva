@@ -214,10 +214,22 @@ function DecodificacaoAlma() {
               ← Voltar para Produtos
             </Link>
             
-            <div className="bg-gradient-to-br from-primary to-primary-dark text-white rounded-2xl p-8 md:p-12 mb-8">
+            <div className="bg-gradient-to-br from-orange-600 to-orange-700 text-white rounded-2xl p-8 md:p-12 mb-8">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex-1">
-                  <div className="text-6xl mb-4">🎨</div>
+                  <div className="mb-4">
+                    <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="32" cy="32" r="32" fill="url(#flame-gradient)" opacity="0.2"/>
+                      <path d="M32 10C32 10 20 22 20 32C20 38.627 25.373 44 32 44C38.627 44 44 38.627 44 32C44 22 32 10 32 10Z" fill="white" opacity="0.9"/>
+                      <path d="M32 20C32 20 26 26 26 32C26 35.314 28.686 38 32 38C35.314 38 38 35.314 38 32C38 26 32 20 32 20Z" fill="white"/>
+                      <defs>
+                        <linearGradient id="flame-gradient" x1="0" y1="0" x2="64" y2="64">
+                          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.3"/>
+                          <stop offset="100%" stopColor="#ffffff" stopOpacity="0.1"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
                   <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4">
                     Decodificação da Alma
                 </h1>
@@ -426,10 +438,25 @@ function PonteDigital() {
             ← Voltar para Produtos
           </Link>
           
-          <div className="bg-gradient-to-br from-primary to-primary-dark text-white rounded-2xl p-8 md:p-12 mb-8">
+          <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-2xl p-8 md:p-12 mb-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex-1">
-                <div className="text-6xl mb-4">🌉</div>
+                <div className="mb-4">
+                  <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="32" fill="url(#globe-gradient)" opacity="0.2"/>
+                    <circle cx="32" cy="32" r="18" stroke="white" strokeWidth="2" opacity="0.9"/>
+                    <ellipse cx="32" cy="32" rx="8" ry="18" stroke="white" strokeWidth="2" opacity="0.9"/>
+                    <line x1="14" y1="32" x2="50" y2="32" stroke="white" strokeWidth="2" opacity="0.9"/>
+                    <path d="M32 14C32 14 38 20 38 32C38 44 32 50 32 50" stroke="white" strokeWidth="2" opacity="0.9"/>
+                    <path d="M32 14C32 14 26 20 26 32C26 44 32 50 32 50" stroke="white" strokeWidth="2" opacity="0.9"/>
+                    <defs>
+                      <linearGradient id="globe-gradient" x1="0" y1="0" x2="64" y2="64">
+                        <stop offset="0%" stopColor="#ffffff" stopOpacity="0.3"/>
+                        <stop offset="100%" stopColor="#ffffff" stopOpacity="0.1"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
                 <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4">
                   Construção da Ponte Digital
                 </h1>
@@ -652,10 +679,27 @@ function InteligenciaSimbiotica() {
             ← Voltar para Produtos
           </Link>
           
-          <div className="bg-gradient-to-br from-primary to-primary-dark text-white rounded-2xl p-8 md:p-12 mb-8">
+          <div className="bg-gradient-to-br from-green-600 to-green-700 text-white rounded-2xl p-8 md:p-12 mb-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex-1">
-                <div className="text-6xl mb-4">🤖</div>
+                <div className="mb-4">
+                  <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="32" fill="url(#bulb-gradient)" opacity="0.2"/>
+                    <circle cx="32" cy="26" r="10" stroke="white" strokeWidth="2.5" opacity="0.9"/>
+                    <path d="M26 36C26 36 26 38 28 40H36C38 38 38 36 38 36" stroke="white" strokeWidth="2.5" strokeLinecap="round" opacity="0.9"/>
+                    <line x1="32" y1="42" x2="32" y2="46" stroke="white" strokeWidth="2.5" strokeLinecap="round" opacity="0.9"/>
+                    <line x1="28" y1="46" x2="36" y2="46" stroke="white" strokeWidth="2.5" strokeLinecap="round" opacity="0.9"/>
+                    <line x1="32" y1="10" x2="32" y2="14" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.7"/>
+                    <line x1="44" y1="16" x2="41" y2="19" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.7"/>
+                    <line x1="20" y1="16" x2="23" y2="19" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.7"/>
+                    <defs>
+                      <linearGradient id="bulb-gradient" x1="0" y1="0" x2="64" y2="64">
+                        <stop offset="0%" stopColor="#ffffff" stopOpacity="0.3"/>
+                        <stop offset="100%" stopColor="#ffffff" stopOpacity="0.1"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
                 <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4">
                   Inteligência Simbiótica
                 </h1>
