@@ -1,0 +1,35 @@
+# Coolify Deploy Configuration
+# Este arquivo documenta as configurações recomendadas para o Coolify
+
+# Build Settings
+BUILD_COMMAND=npm run build
+BUILD_DIRECTORY=dist
+NODE_VERSION=20
+
+# Environment Variables (opcional)
+# NODE_ENV=production
+
+# Port Configuration
+PORT=80
+HEALTH_CHECK_PATH=/health
+
+# Docker Settings
+DOCKERFILE_PATH=./Dockerfile
+DOCKER_COMPOSE_FILE=
+
+# Domain Settings (configure no Coolify)
+# DOMAIN=estrategiaviva.com.br
+# SSL=auto
+
+# Resource Limits (opcional)
+# MEMORY_LIMIT=512M
+# CPU_LIMIT=1
+
+# Restart Policy
+RESTART_POLICY=always
+
+# Health Check Configuration
+HEALTH_CHECK_INTERVAL=30s
+HEALTH_CHECK_TIMEOUT=3s
+HEALTH_CHECK_RETRIES=3
+HEALTH_CHECK_START_PERIOD=40s

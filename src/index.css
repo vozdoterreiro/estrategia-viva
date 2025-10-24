@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 48 100% 97%;
+  --foreground: 200 100% 11%;
+  --card: 48 100% 99%;
+  --card-foreground: 200 100% 11%;
+  --popover: 48 100% 99%;
+  --popover-foreground: 200 100% 11%;
+  --primary: 200 100% 11%;
+  --primary-foreground: 48 100% 97%;
+  --primary-light: 200 60% 25%;
+  --primary-dark: 200 100% 8%;
+  --secondary: 42 35% 52%;
+  --secondary-foreground: 48 100% 97%;
+  --secondary-light: 42 45% 65%;
+  --secondary-dark: 42 35% 40%;
+  --muted: 48 30% 92%;
+  --muted-foreground: 200 30% 40%;
+  --accent: 42 35% 52%;
+  --accent-foreground: 48 100% 97%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 48 100% 97%;
+  --border: 48 20% 85%;
+  --input: 48 20% 85%;
+  --ring: 200 100% 11%;
+  --radius: 0.75rem;
+  
+  /* Custom variables */
+  --shadow-soft: 0 4px 20px hsl(200 100% 11% / 0.08);
+  --shadow-medium: 0 8px 30px hsl(200 100% 11% / 0.12);
+  --shadow-strong: 0 20px 40px hsl(200 100% 11% / 0.15);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    @apply font-bold;
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+}

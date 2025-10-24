@@ -1,0 +1,5 @@
+# Data Directory
+
+This directory stores form submissions from the website.
+
+**Important:** This folder should be added to `.gitignore` to prevent sensitive data from being committed to version control.
