@@ -13,46 +13,74 @@ export default function Contato() {
     message: ''
   })
 
+  const [submitStatus, setSubmitStatus] = useState({
+    show: false,
+    type: '', // 'success' ou 'error'
+    message: ''
+  })
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus({ show: false, type: '', message: '' })
     
-    // Temporariamente desabilitado (sem backend)
-    // TODO: Reativar quando backend estiver em produção
-    /*
     try {
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString()
-        }),
+      // Salvar no backend (se disponível)
+      try {
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...formData,
+            timestamp: new Date().toISOString()
+          }),
+        })
+      } catch (error) {
+        console.log('Backend não disponível, continuando com WhatsApp')
+      }
+
+      // Mostrar mensagem de sucesso
+      setSubmitStatus({
+        show: true,
+        type: 'success',
+        message: 'Formulário enviado com sucesso! Você será redirecionado para o WhatsApp em alguns segundos...'
       })
+
+      // Aguardar 2 segundos antes de abrir WhatsApp
+      setTimeout(() => {
+        // Mensagem simplificada para WhatsApp (sem dados do formulário)
+        const whatsappMessage = `Olá! meu nome é ${formData.name}. Vim através do site estrategiaviva.com.br`
+        const whatsappNumber = '5521959527189'
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+        
+        window.open(whatsappURL, '_blank')
+        
+        // Limpar formulário
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          interest: '',
+          message: ''
+        })
+
+        setIsSubmitting(false)
+      }, 2000)
+
     } catch (error) {
-      console.error('Error saving form:', error)
+      console.error('Error:', error)
+      setSubmitStatus({
+        show: true,
+        type: 'error',
+        message: 'Ops! Ocorreu um erro ao enviar o formulário. Por favor, tente novamente ou entre em contato diretamente pelo WhatsApp.'
+      })
+      setIsSubmitting(false)
     }
-    */
-    
-    // Formata mensagem para WhatsApp
-    const whatsappMessage = `
-Olá! Vim através do site estrategiaviva.com.br
-
-*Nome:* ${formData.name}
-*Email:* ${formData.email}
-*Empresa:* ${formData.company}
-*Telefone:* ${formData.phone}
-*Interesse:* ${formData.interest}
-
-*Mensagem:*
-${formData.message}
-    `.trim()
-
-    const whatsappNumber = '5521959527189'
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
-    
-    window.open(whatsappURL, '_blank')
   }
 
   const handleChange = (e) => {
@@ -100,6 +128,29 @@ ${formData.message}
                 <h2 className="text-2xl font-heading font-bold text-primary mb-6">
                   Agende uma Conversa
                 </h2>
+
+                {/* Notificação de Status */}
+                {submitStatus.show && (
+                  <div className={`mb-6 p-4 rounded-lg border-2 ${
+                    submitStatus.type === 'success' 
+                      ? 'bg-green-50 border-green-500 text-green-800' 
+                      : 'bg-red-50 border-red-500 text-red-800'
+                  } animate-fadeIn`}>
+                    <div className="flex items-start gap-3">
+                      <span className="text-2xl flex-shrink-0">
+                        {submitStatus.type === 'success' ? '✅' : '❌'}
+                      </span>
+                      <div>
+                        <p className="font-semibold mb-1">
+                          {submitStatus.type === 'success' ? 'Sucesso!' : 'Erro'}
+                        </p>
+                        <p className="text-sm leading-relaxed">
+                          {submitStatus.message}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -203,14 +254,31 @@ ${formData.message}
 
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:bg-secondary-dark transition-all shadow-medium flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                    className={`w-full px-8 py-4 rounded-lg font-semibold transition-all shadow-medium flex items-center justify-center gap-2 ${
+                      isSubmitting 
+                        ? 'bg-gray-400 cursor-not-allowed' 
+                        : 'bg-secondary text-secondary-foreground hover:bg-secondary-dark'
+                    }`}
                   >
-                    <span>💬</span>
-                    Enviar via WhatsApp
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span>Enviando...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>💬</span>
+                        Enviar e Conversar no WhatsApp
+                      </>
+                    )}
                   </button>
 
                   <p className="text-sm text-muted-foreground text-center">
-                    Ao enviar, você será redirecionado para o WhatsApp
+                    Seus dados serão salvos e você será redirecionado para o WhatsApp
                   </p>
                 </form>
               </div>
