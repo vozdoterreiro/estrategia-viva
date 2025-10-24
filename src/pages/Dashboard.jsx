@@ -20,11 +20,28 @@ export default function Dashboard() {
         const response = await fetch('/data/submissions.json')
         if (response.ok) {
           const data = await response.json()
-          setSubmissions(data)
-          calculateStats(data)
+          // Filtra apenas contatos (não newsletters)
+          const contacts = data.filter(item => item.type === 'contact')
+          setSubmissions(contacts)
+          calculateStats(contacts)
         }
       } catch (error) {
         console.error('Erro ao carregar submissões:', error)
+        // Fallback: cria dados de exemplo se o arquivo não existir
+        const mockData = [
+          {
+            timestamp: new Date().toISOString(),
+            type: 'contact',
+            name: 'Lead de Exemplo',
+            email: 'exemplo@empresa.com',
+            company: 'Empresa Exemplo',
+            phone: '11999999999',
+            interest: 'Diagnóstico',
+            message: 'Interesse em conhecer os serviços'
+          }
+        ]
+        setSubmissions(mockData)
+        calculateStats(mockData)
       } finally {
         setLoading(false)
       }

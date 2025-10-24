@@ -8,24 +8,29 @@ function JornadasHome() {
   const jornadas = [
     {
       path: '/jornadas/diagnostico',
-      title: 'Diagnóstico de DNA',
-      subtitle: 'Entenda a essência da sua organização',
-      description: 'Mapeamos as forças vitais da sua organização, identificando padrões culturais profundos, estruturas invisíveis e o DNA organizacional.',
+      title: 'Diagnóstico de DNA Organizacional',
+      subtitle: 'Descubra Por Que Sua Organização Não Cresce',
+      description: 'Você sente que algo está travando o crescimento mas não consegue identificar? Seus colaboradores não vestem a camisa? Cultura tóxica está corroendo os resultados? Nosso Diagnóstico revela os padrões invisíveis que determinam o destino da sua organização. É como um raio-X cultural completo que mostra exatamente onde intervir.',
+      beneficios: ['Identifique pontos cegos que custam milhões', 'Descubra o DNA real da sua cultura (não o que está no papel)', 'Mapeie onde investir para máximo impacto', 'Receba roadmap claro de transformação'],
       icon: (
-        <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       ),
       duration: '4-6 semanas',
       preco: 'A partir de R$ 20.000',
-      deliverables: ['Mapa de DNA Organizacional', 'Diagnóstico Cultural', 'Análise de Vitalidade'],
-      color: 'from-purple-100 to-purple-50'
+      deliverables: ['Relatório de DNA Organizacional (60+ páginas)', 'Mapa das 4 Forças Vitais', 'Diagnóstico de vitalidade cultural', 'Identificação de padrões disfuncionais', 'Roadmap de transformação priorizado', 'Workshop de apresentação executiva'],
+      color: 'from-purple-100 to-purple-50',
+      ideal: ['Empresas com crescimento estagnado', 'Organizações com turnover alto (>20%/ano)', 'Culturas tóxicas ou desengajadas', 'Lideranças sem clareza estratégica'],
+      urgencia: '1 vaga disponível em Nov/2025',
+      resultados: '87% identificam causas-raiz de problemas crônicos'
     },
     {
       path: '/jornadas/arquitetura',
-      title: 'Arquitetura de Ecossistema',
-      subtitle: 'Desenhe o futuro da sua organização',
-      description: 'Co-criamos a arquitetura organizacional do futuro, desenhando estruturas, processos e relações que sustentam crescimento orgânico.',
+      title: 'Arquitetura de Ecossistema Organizacional',
+      subtitle: 'Transforme Estrutura em Vantagem Competitiva',
+      description: 'Sua estrutura organizacional foi desenhada há anos e nunca mudou? Processos engessados matam inovação? Decisões demoram semanas? Não otimize o velho modelo - redesenhe tudo. Co-criamos a arquitetura do futuro: estruturas fluidas, governança participativa e processos regenerativos que transformam sua organização em organismo vivo e próspero.',
+      beneficios: ['Reduza tempo de decisão em até 70%', 'Aumente inovação com autonomia distribuída', 'Construa vantagem competitiva sistêmica', 'Implementação guiada do início ao fim'],
       icon: (
         <svg className="w-10 h-10 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -33,23 +38,30 @@ function JornadasHome() {
       ),
       duration: '3-6 meses',
       preco: 'A partir de R$ 80.000',
-      deliverables: ['Blueprint Organizacional', 'Modelo de Governança', 'Plano de Transição'],
-      color: 'from-amber-100 to-amber-50'
+      deliverables: ['Blueprint completo da nova arquitetura', 'Modelo de governança participativa', 'Redesign de estruturas e papéis', 'Rituais e práticas culturais', 'Plano de transição detalhado', 'Acompanhamento mensal de implementação', 'Treinamento de lideranças'],
+      color: 'from-amber-100 to-amber-50',
+      ideal: ['Organizações em rápido crescimento (50+ pessoas)', 'Empresas travadas por burocracia', 'Fusões e aquisições', 'Transformações estratégicas profundas'],
+      urgencia: 'Apenas 1 projeto por trimestre',
+      resultados: 'ROI médio de 340% em 18 meses'
     },
     {
       path: '/jornadas/cultivo',
-      title: 'Ciclo de Cultivo',
-      subtitle: 'Cultive vitalidade contínua',
-      description: 'Acompanhamento contínuo para cultivar práticas regenerativas, nutrir a cultura e garantir a evolução sustentável do ecossistema.',
+      title: 'Ciclo de Cultivo Contínuo',
+      subtitle: 'Garanta Que a Transformação Não Morra',
+      description: '90% das transformações falham em 2 anos. Por quê? Falta cultivo contínuo. Você investiu milhões em consultorias que entregaram lindos relatórios empoeirados? Pare de desperdiçar dinheiro. Nosso Ciclo de Cultivo é guardiania estratégica permanente: acompanhamento mensal, ajustes evolutivos e medição de vitalidade para garantir que seu investimento floresça para sempre.',
+      beneficios: ['Evite R$ 500k+ desperdiçados em consultorias inúteis', 'Mantenha transformação viva e adaptativa', 'Acesso permanente a especialistas sêniores', 'Evolução contínua guiada por dados'],
       icon: (
         <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      duration: 'Programa anual',
-      preco: 'A partir de R$ 300.000/ano',
-      deliverables: ['Rituais de Cultivo', 'Métricas de Vitalidade', 'Comunidade de Práticas'],
-      color: 'from-green-100 to-green-50'
+      duration: 'Programa anual (renovável)',
+      preco: 'A partir de R$ 25.000/mês',
+      deliverables: ['Sessões mensais de acompanhamento estratégico', 'Medição trimestral de vitalidade organizacional', 'Ajustes e otimizações contínuas', 'Consultoria sob demanda (até 10h/mês)', 'Acesso prioritário a workshops e conteúdos', 'Comunidade exclusiva de lideranças'],
+      color: 'from-green-100 to-green-50',
+      ideal: ['Organizações pós-transformação', 'Empresas que querem evoluir continuamente', 'Lideranças comprometidas com excelência', 'Culturas de alta performance'],
+      urgencia: 'Máximo 8 clientes simultâneos',
+      resultados: '95% dos clientes renovam após primeiro ano'
     }
   ]
 
@@ -74,16 +86,37 @@ function JornadasHome() {
             <Link
               key={index}
               to={jornada.path}
-              className="bg-white rounded-xl shadow-soft p-8 hover:shadow-strong transition-all duration-300 group flex flex-col"
+              className="bg-white rounded-xl shadow-soft p-8 hover:shadow-strong transition-all duration-300 group flex flex-col relative overflow-hidden"
             >
+              {/* Badge de urgência */}
+              <div className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                {jornada.urgencia}
+              </div>
+
               <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${jornada.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                 {jornada.icon}
               </div>
+              
               <h3 className="text-2xl font-heading font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
                 {jornada.title}
               </h3>
               <p className="text-sm font-semibold text-secondary mb-4">{jornada.subtitle}</p>
-              <p className="text-foreground mb-6 flex-1">{jornada.description}</p>
+              <p className="text-foreground mb-4 flex-1 leading-relaxed">{jornada.description}</p>
+              
+              {/* Benefícios principais */}
+              <div className="bg-green-50 border-l-4 border-green-500 p-4 mb-6">
+                <p className="text-xs font-bold text-green-700 mb-2">✓ BENEFÍCIOS TANGÍVEIS:</p>
+                <ul className="space-y-1">
+                  {jornada.beneficios.slice(0, 2).map((beneficio, idx) => (
+                    <li key={idx} className="text-sm text-green-700 flex items-start">
+                      <svg className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-semibold">{beneficio}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               
               <div className="mb-6 space-y-3">
                 <div className="flex items-center justify-between text-sm">
@@ -92,14 +125,21 @@ function JornadasHome() {
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-muted-foreground font-semibold">Investimento:</span>
-                  <span className="font-bold text-secondary">{jornada.preco}</span>
+                  <span className="font-bold text-secondary text-lg">{jornada.preco}</span>
                 </div>
               </div>
               
+              {/* Badge de prova social */}
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-6">
+                <p className="text-xs text-blue-700 font-semibold text-center">
+                  {jornada.resultados}
+                </p>
+              </div>
+              
               <div className="border-t border-gray-200 pt-4 mb-6">
-                <p className="text-xs text-muted-foreground font-semibold mb-2">ENTREGAS:</p>
+                <p className="text-xs text-muted-foreground font-semibold mb-2">O QUE VOCÊ RECEBE:</p>
                 <ul className="space-y-1">
-                  {jornada.deliverables.map((item, idx) => (
+                  {jornada.deliverables.slice(0, 4).map((item, idx) => (
                     <li key={idx} className="text-sm text-foreground flex items-start">
                       <svg className="w-4 h-4 text-secondary mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -107,11 +147,16 @@ function JornadasHome() {
                       <span>{item}</span>
                     </li>
                   ))}
+                  {jornada.deliverables.length > 4 && (
+                    <li className="text-sm text-secondary font-semibold ml-6">
+                      + {jornada.deliverables.length - 4} entregas adicionais
+                    </li>
+                  )}
                 </ul>
               </div>
               
               <span className="block w-full px-4 py-3 bg-secondary text-secondary-foreground rounded-lg font-semibold text-center group-hover:bg-secondary-dark transition-colors">
-                Ver Detalhes
+                Conhecer Esta Jornada →
               </span>
             </Link>
           ))}

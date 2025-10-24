@@ -9,35 +9,41 @@ function ProdutosHome() {
     {
       path: '/produtos/decodificacao-alma',
       icon: (
-        <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
         </svg>
       ),
       titulo: 'Decodificação da Alma',
       subtitulo: 'Branding e Identidade Estratégica',
-      descricao: 'Não criamos marcas, nós revelamos a identidade pré-existente. Uma micro-imersão antropológica para decodificar a "Alma" da organização.',
+      descricao: 'Sua marca não atrai os clientes certos? Você se posiciona como commodity? Pare de competir por preço. Revelamos a identidade única da sua organização através de uma imersão antropológica profunda, transformando sua essência em uma marca magnética que atrai naturalmente seu público ideal.',
+      beneficios: ['Aumente o ticket médio em até 40%', 'Reduza o ciclo de vendas pela metade', 'Diferencie-se radicalmente da concorrência', 'Construa autoridade no seu mercado'],
       preco: 'R$ 9.000',
       duracao: '5 semanas',
-      entregas: ['Logo completo (variações)', 'Paleta de cores + Tipografia', 'Brand Guide', 'Tom de Voz'],
-      ideal: ['Startups sem identidade visual', 'Organizações em rebranding', 'Projetos que precisam se posicionar'],
-      color: 'from-orange-100 to-orange-50'
+      entregas: ['Logo completo com 6+ variações', 'Paleta de cores estratégica + Tipografia profissional', 'Brand Guide completo (40+ páginas)', 'Tom de Voz e Mensagens-chave', 'Templates para redes sociais', 'Apresentação de implementação'],
+      ideal: ['Startups que precisam se posicionar como líderes', 'Empresas confundidas com concorrentes genéricos', 'Negócios que competem apenas por preço', 'Organizações em rebranding estratégico'],
+      color: 'from-orange-100 to-orange-50',
+      urgencia: 'Apenas 2 vagas/mês',
+      resultados: '94% dos clientes reportam aumento de conversão'
     },
     {
       path: '/produtos/ponte-digital',
       icon: (
-        <svg className="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
         </svg>
       ),
-      titulo: 'Construção da Ponte Digital',
-      subtitulo: 'Website Institucional Estratégico',
-      descricao: 'Não desenvolvemos sites, nós arquitetamos o principal habitat digital de um ecossistema. Cada página serve a um propósito estratégico.',
+      titulo: 'Ponte Digital',
+      subtitulo: 'Website que Converte Visitantes em Leads',
+      descricao: 'Seu site está perdendo 90% dos visitantes? Parece igual aos concorrentes? Nós não criamos sites bonitos e inúteis. Arquitetamos seu principal habitat digital: cada seção, cada palavra, cada CTA é estrategicamente posicionado para transformar visitantes em leads qualificados e leads em clientes.',
+      beneficios: ['Multiplique sua taxa de conversão em 3-5x', 'Gere leads qualificados em piloto automático', 'Reduza custo de aquisição de clientes', 'Apareça no Google para buscas estratégicas'],
       preco: 'R$ 15.000',
       duracao: '8 semanas',
-      entregas: ['Website responsivo (6 páginas)', 'Design UI/UX customizado', 'SEO on-page', 'Treinamento CMS'],
-      ideal: ['Organizações sem presença digital', 'Sites desatualizados ou genéricos', 'Projetos que precisam converter leads'],
-      color: 'from-blue-100 to-blue-50'
+      entregas: ['Website responsivo (até 8 páginas estratégicas)', 'Design UI/UX otimizado para conversão', 'Copywriting persuasivo profissional', 'SEO on-page completo', 'Integrações com ferramentas (CRM, Analytics, WhatsApp)', 'Treinamento completo para gestão', '30 dias de suporte pós-lançamento'],
+      ideal: ['Empresas sem presença digital profissional', 'Sites desatualizados que não geram leads', 'Negócios dependentes de indicação', 'Marcas que querem escalar digitalmente'],
+      color: 'from-blue-100 to-blue-50',
+      urgencia: 'Próxima disponibilidade: Novembro/2025',
+      resultados: 'Clientes geram média de 15-30 leads/mês após 90 dias'
     },
     {
       path: '/produtos/inteligencia-simbiotica',
@@ -47,13 +53,16 @@ function ProdutosHome() {
         </svg>
       ),
       titulo: 'Inteligência Simbiótica',
-      subtitulo: 'Automação com IA para Captação',
-      descricao: 'Seguimos o princípio da "Simbiose Digital-Real". IA que amplifica a capacidade humana, não a substitui. Conversas mais profundas e eficazes.',
+      subtitulo: 'IA que Qualifica Leads Enquanto Você Dorme',
+      descricao: 'Sua equipe perde tempo com leads desqualificados? Respostas demoram horas e vendas esfriam? Nossa IA trabalha 24/7 qualificando contatos, respondendo dúvidas complexas e agendando reuniões apenas com prospects prontos para comprar. É como ter 3 SDRs trabalhando sem parar, mas custando 90% menos.',
+      beneficios: ['Economize 15-20h/semana da equipe comercial', 'Resposta instantânea = mais vendas', 'Qualifique 100% dos leads automaticamente', 'Aumente taxa de agendamento em 60%'],
       preco: 'R$ 12.000',
       duracao: '4 semanas',
-      entregas: ['Chat de qualificação OU Sequência de e-mails', 'Personalidade da IA', 'Dashboard de performance', '30 dias de otimização'],
-      ideal: ['Alto volume de contatos repetitivos', 'Necessidade de qualificar leads', 'Equipe pequena com muito trabalho'],
-      color: 'from-green-100 to-green-50'
+      entregas: ['Chatbot conversacional OU Sequência de e-mails inteligente', 'Personalidade e tom de voz customizados', 'Integração com seu CRM/planilhas', 'Dashboard de performance e métricas', 'Scripts de qualificação otimizados', '60 dias de otimização contínua baseada em dados'],
+      ideal: ['Empresas com alto volume de contatos não qualificados', 'Times comerciais sobrecarregados', 'Negócios B2B com ciclo de vendas longo', 'Startups com equipe enxuta'],
+      color: 'from-green-100 to-green-50',
+      urgencia: 'Apenas 3 vagas/mês',
+      resultados: 'Economia média de R$ 8.500/mês em custos operacionais'
     }
   ]
 
@@ -78,16 +87,37 @@ function ProdutosHome() {
             <Link
               key={index}
               to={produto.path}
-              className="bg-white rounded-xl shadow-soft p-8 hover:shadow-strong transition-all duration-300 group flex flex-col"
+              className="bg-white rounded-xl shadow-soft p-8 hover:shadow-strong transition-all duration-300 group flex flex-col relative overflow-hidden"
             >
+              {/* Badge de urgência */}
+              <div className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                {produto.urgencia}
+              </div>
+
               <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${produto.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                 {produto.icon}
               </div>
+              
               <h3 className="text-2xl font-heading font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
                 {produto.titulo}
               </h3>
               <p className="text-sm font-semibold text-secondary mb-4">{produto.subtitulo}</p>
-              <p className="text-foreground mb-6 flex-1">{produto.descricao}</p>
+              <p className="text-foreground mb-4 flex-1 leading-relaxed">{produto.descricao}</p>
+              
+              {/* Benefícios principais */}
+              <div className="bg-green-50 border-l-4 border-green-500 p-4 mb-6">
+                <p className="text-xs font-bold text-green-700 mb-2">✓ RESULTADOS COMPROVADOS:</p>
+                <ul className="space-y-1">
+                  {produto.beneficios.slice(0, 2).map((beneficio, idx) => (
+                    <li key={idx} className="text-sm text-green-700 flex items-start">
+                      <svg className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-semibold">{beneficio}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               
               <div className="mb-6 space-y-3">
                 <div className="flex items-center justify-between text-sm">
@@ -96,14 +126,21 @@ function ProdutosHome() {
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-muted-foreground font-semibold">Investimento:</span>
-                  <span className="font-bold text-secondary">A partir de {produto.preco}</span>
+                  <span className="font-bold text-secondary text-lg">A partir de {produto.preco}</span>
                 </div>
               </div>
               
+              {/* Badge de prova social */}
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-6">
+                <p className="text-xs text-blue-700 font-semibold text-center">
+                  {produto.resultados}
+                </p>
+              </div>
+              
               <div className="border-t border-gray-200 pt-4 mb-6">
-                <p className="text-xs text-muted-foreground font-semibold mb-2">ENTREGAS:</p>
+                <p className="text-xs text-muted-foreground font-semibold mb-2">O QUE VOCÊ RECEBE:</p>
                 <ul className="space-y-1">
-                  {produto.entregas.map((item, idx) => (
+                  {produto.entregas.slice(0, 4).map((item, idx) => (
                     <li key={idx} className="text-sm text-foreground flex items-start">
                       <svg className="w-4 h-4 text-secondary mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -111,11 +148,16 @@ function ProdutosHome() {
                       <span>{item}</span>
                     </li>
                   ))}
+                  {produto.entregas.length > 4 && (
+                    <li className="text-sm text-secondary font-semibold ml-6">
+                      + {produto.entregas.length - 4} entregas adicionais
+                    </li>
+                  )}
                 </ul>
               </div>
               
               <span className="block w-full px-4 py-3 bg-secondary text-secondary-foreground rounded-lg font-semibold text-center group-hover:bg-secondary-dark transition-colors">
-                Ver Detalhes
+                Ver Detalhes Completos →
               </span>
             </Link>
           ))}
