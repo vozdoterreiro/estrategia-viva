@@ -11,30 +11,45 @@ function JornadasHome() {
       title: 'Diagnóstico de DNA',
       subtitle: 'Entenda a essência da sua organização',
       description: 'Mapeamos as forças vitais da sua organização, identificando padrões culturais profundos, estruturas invisíveis e o DNA organizacional.',
-      icon: '🔬',
+      icon: (
+        <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+      ),
       duration: '4-6 semanas',
       preco: 'A partir de R$ 20.000',
-      deliverables: ['Mapa de DNA Organizacional', 'Diagnóstico Cultural', 'Análise de Vitalidade']
+      deliverables: ['Mapa de DNA Organizacional', 'Diagnóstico Cultural', 'Análise de Vitalidade'],
+      color: 'from-purple-100 to-purple-50'
     },
     {
       path: '/jornadas/arquitetura',
       title: 'Arquitetura de Ecossistema',
       subtitle: 'Desenhe o futuro da sua organização',
       description: 'Co-criamos a arquitetura organizacional do futuro, desenhando estruturas, processos e relações que sustentam crescimento orgânico.',
-      icon: '�️',
+      icon: (
+        <svg className="w-10 h-10 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
       duration: '3-6 meses',
       preco: 'A partir de R$ 80.000',
-      deliverables: ['Blueprint Organizacional', 'Modelo de Governança', 'Plano de Transição']
+      deliverables: ['Blueprint Organizacional', 'Modelo de Governança', 'Plano de Transição'],
+      color: 'from-amber-100 to-amber-50'
     },
     {
       path: '/jornadas/cultivo',
       title: 'Ciclo de Cultivo',
       subtitle: 'Cultive vitalidade contínua',
       description: 'Acompanhamento contínuo para cultivar práticas regenerativas, nutrir a cultura e garantir a evolução sustentável do ecossistema.',
-      icon: '�',
+      icon: (
+        <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
       duration: 'Programa anual',
       preco: 'A partir de R$ 300.000/ano',
-      deliverables: ['Rituais de Cultivo', 'Métricas de Vitalidade', 'Comunidade de Práticas']
+      deliverables: ['Rituais de Cultivo', 'Métricas de Vitalidade', 'Comunidade de Práticas'],
+      color: 'from-green-100 to-green-50'
     }
   ]
 
@@ -61,7 +76,9 @@ function JornadasHome() {
               to={jornada.path}
               className="bg-white rounded-xl shadow-soft p-8 hover:shadow-strong transition-all duration-300 group flex flex-col"
             >
-              <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform">{jornada.icon}</div>
+              <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${jornada.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                {jornada.icon}
+              </div>
               <h3 className="text-2xl font-heading font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
                 {jornada.title}
               </h3>
@@ -84,7 +101,9 @@ function JornadasHome() {
                 <ul className="space-y-1">
                   {jornada.deliverables.map((item, idx) => (
                     <li key={idx} className="text-sm text-foreground flex items-start">
-                      <span className="text-secondary mr-2 flex-shrink-0">✓</span>
+                      <svg className="w-4 h-4 text-secondary mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
                       <span>{item}</span>
                     </li>
                   ))}

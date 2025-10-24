@@ -339,8 +339,12 @@ export default function Home() {
                   description: 'Mergulho antropológico profundo na sua cultura. Revelamos o código genético invisível que determina como sua organização realmente funciona.',
                   highlights: ['Mapeamento das 4 Forças Vitais', 'Análise de rituais e símbolos', 'Identificação de padrões inconscientes', 'Relatório estratégico executivo'],
                   path: '/jornadas/diagnostico',
-                  color: 'bg-gradient-to-r from-primary/10 to-primary/5',
-                  icon: '🔬'
+                  color: 'bg-gradient-to-r from-purple-100 to-purple-50',
+                  icon: (
+                    <svg className="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                  )
                 },
                 {
                   number: '02',
@@ -349,8 +353,12 @@ export default function Home() {
                   description: 'Co-criação de estruturas, processos e práticas que cultivam prosperidade regenerativa. Do diagnóstico à implementação completa.',
                   highlights: ['Redesign de estruturas organizacionais', 'Rituais e práticas culturais', 'Governança participativa', 'Acompanhamento de implementação'],
                   path: '/jornadas/arquitetura',
-                  color: 'bg-gradient-to-r from-secondary/10 to-secondary/5',
-                  icon: '🏗️'
+                  color: 'bg-gradient-to-r from-amber-100 to-amber-50',
+                  icon: (
+                    <svg className="w-12 h-12 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  )
                 },
                 {
                   number: '03',
@@ -359,8 +367,12 @@ export default function Home() {
                   description: 'Guardiania estratégica permanente. Garantimos que seu investimento floresça ao longo do tempo com evolução adaptativa.',
                   highlights: ['Acompanhamento mensal estratégico', 'Ajustes evolutivos contínuos', 'Medição de vitalidade organizacional', 'Consultoria sob demanda'],
                   path: '/jornadas/cultivo',
-                  color: 'bg-gradient-to-r from-primary/10 to-primary/5',
-                  icon: '🌿'
+                  color: 'bg-gradient-to-r from-green-100 to-green-50',
+                  icon: (
+                    <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  )
                 }
               ].map((jornada, index) => (
                 <div
@@ -369,7 +381,7 @@ export default function Home() {
                 >
                   <div className="flex flex-col md:flex-row">
                     <div className={`${jornada.color} p-8 md:w-1/4 flex flex-col justify-center items-center border-r border-gray-200`}>
-                      <span className="text-5xl mb-3">{jornada.icon}</span>
+                      <div className="mb-3">{jornada.icon}</div>
                       <span className="text-4xl font-bold text-primary/30 mb-2">{jornada.number}</span>
                       <span className="text-sm font-semibold text-muted-foreground">{jornada.duration}</span>
                     </div>
@@ -383,16 +395,21 @@ export default function Home() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
                         {jornada.highlights.map((highlight, i) => (
                           <div key={i} className="flex items-start">
-                            <span className="text-secondary mr-2">✓</span>
+                            <svg className="w-4 h-4 text-secondary mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
                             <span className="text-sm text-muted-foreground">{highlight}</span>
                           </div>
                         ))}
                       </div>
                       <Link
                         to={jornada.path}
-                        className="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors"
+                        className="inline-flex items-center gap-1 text-primary font-semibold hover:text-secondary transition-colors group/link"
                       >
-                        Ver detalhes completos →
+                        <span>Ver detalhes completos</span>
+                        <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
                       </Link>
                     </div>
                   </div>

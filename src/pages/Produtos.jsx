@@ -8,36 +8,52 @@ function ProdutosHome() {
   const produtos = [
     {
       path: '/produtos/decodificacao-alma',
-      icon: '🔥',
+      icon: (
+        <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+        </svg>
+      ),
       titulo: 'Decodificação da Alma',
       subtitulo: 'Branding e Identidade Estratégica',
       descricao: 'Não criamos marcas, nós revelamos a identidade pré-existente. Uma micro-imersão antropológica para decodificar a "Alma" da organização.',
       preco: 'R$ 9.000',
       duracao: '5 semanas',
       entregas: ['Logo completo (variações)', 'Paleta de cores + Tipografia', 'Brand Guide', 'Tom de Voz'],
-      ideal: ['Startups sem identidade visual', 'Organizações em rebranding', 'Projetos que precisam se posicionar']
+      ideal: ['Startups sem identidade visual', 'Organizações em rebranding', 'Projetos que precisam se posicionar'],
+      color: 'from-orange-100 to-orange-50'
     },
     {
       path: '/produtos/ponte-digital',
-      icon: '�',
+      icon: (
+        <svg className="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+        </svg>
+      ),
       titulo: 'Construção da Ponte Digital',
       subtitulo: 'Website Institucional Estratégico',
       descricao: 'Não desenvolvemos sites, nós arquitetamos o principal habitat digital de um ecossistema. Cada página serve a um propósito estratégico.',
       preco: 'R$ 15.000',
       duracao: '8 semanas',
       entregas: ['Website responsivo (6 páginas)', 'Design UI/UX customizado', 'SEO on-page', 'Treinamento CMS'],
-      ideal: ['Organizações sem presença digital', 'Sites desatualizados ou genéricos', 'Projetos que precisam converter leads']
+      ideal: ['Organizações sem presença digital', 'Sites desatualizados ou genéricos', 'Projetos que precisam converter leads'],
+      color: 'from-blue-100 to-blue-50'
     },
     {
       path: '/produtos/inteligencia-simbiotica',
-      icon: '🌱',
+      icon: (
+        <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      ),
       titulo: 'Inteligência Simbiótica',
       subtitulo: 'Automação com IA para Captação',
       descricao: 'Seguimos o princípio da "Simbiose Digital-Real". IA que amplifica a capacidade humana, não a substitui. Conversas mais profundas e eficazes.',
       preco: 'R$ 12.000',
       duracao: '4 semanas',
       entregas: ['Chat de qualificação OU Sequência de e-mails', 'Personalidade da IA', 'Dashboard de performance', '30 dias de otimização'],
-      ideal: ['Alto volume de contatos repetitivos', 'Necessidade de qualificar leads', 'Equipe pequena com muito trabalho']
+      ideal: ['Alto volume de contatos repetitivos', 'Necessidade de qualificar leads', 'Equipe pequena com muito trabalho'],
+      color: 'from-green-100 to-green-50'
     }
   ]
 
@@ -64,7 +80,9 @@ function ProdutosHome() {
               to={produto.path}
               className="bg-white rounded-xl shadow-soft p-8 hover:shadow-strong transition-all duration-300 group flex flex-col"
             >
-              <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform">{produto.icon}</div>
+              <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${produto.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                {produto.icon}
+              </div>
               <h3 className="text-2xl font-heading font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
                 {produto.titulo}
               </h3>
@@ -87,7 +105,9 @@ function ProdutosHome() {
                 <ul className="space-y-1">
                   {produto.entregas.map((item, idx) => (
                     <li key={idx} className="text-sm text-foreground flex items-start">
-                      <span className="text-secondary mr-2 flex-shrink-0">✓</span>
+                      <svg className="w-4 h-4 text-secondary mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
                       <span>{item}</span>
                     </li>
                   ))}
