@@ -1,5 +1,15 @@
 # 🚀 Guia Rápido de Uso
 
+## 📖 Deploy no Coolify
+
+**Precisa de 1 ou 2 recursos no Coolify?**
+
+Resposta: **Apenas 1 recurso!** 
+
+👉 Veja o guia completo: [COOLIFY-RAPIDO.md](./COOLIFY-RAPIDO.md) ou [CONFIGURACAO-COOLIFY.md](./CONFIGURACAO-COOLIFY.md)
+
+---
+
 ## Iniciar o Site em Desenvolvimento
 
 ```bash

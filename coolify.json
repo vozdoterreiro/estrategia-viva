@@ -20,6 +20,13 @@
     }
   },
   "environment": {
-    "NODE_ENV": "production"
-  }
+    "NODE_ENV": "production",
+    "PORT": "3001"
+  },
+  "volumes": [
+    {
+      "name": "estrategia-viva-data",
+      "mount": "/app/data"
+    }
+  ]
 }

@@ -51,6 +51,42 @@ npm run preview
 
 ## 🐳 Deploy no Coolify
 
+> **⚡ Resposta Rápida**: Você precisa de apenas **1 recurso** no Coolify!  
+> Veja: [COOLIFY-RAPIDO.md](./COOLIFY-RAPIDO.md) | [Guia Completo](./CONFIGURACAO-COOLIFY.md)
+
+### Por que 1 recurso?
+
+Este projeto usa uma **arquitetura monolítica** onde SPA e API rodam no mesmo container:
+- Nginx (porta 80) serve o frontend e faz proxy para `/api/*`
+- Node.js (porta 3001) roda a API internamente
+- Supervisor gerencia ambos os processos
+
+### Configuração Rápida
+
+1. **No Coolify, crie um novo recurso:**
+   - Build Type: **Dockerfile**
+   - Port: **80**
+   - Health Check: **`/health`**
+
+2. **Configure as variáveis de ambiente:**
+   ```env
+   NODE_ENV=production
+   PORT=3001
+   ```
+
+3. **Configure o volume persistente:**
+   ```
+   Volume: estrategia-viva-data → /app/data
+   ```
+
+4. **Deploy!**
+
+### Documentação Detalhada
+
+- 📖 [Guia Rápido Coolify](./COOLIFY-RAPIDO.md) - Responde: "preciso de 1 ou 2 recursos?"
+- 📚 [Configuração Completa](./CONFIGURACAO-COOLIFY.md) - Passo a passo detalhado
+- 🚀 [Deploy Geral](./DEPLOY.md) - Outras opções de deploy
+
 ### Configuração Automática
 
 O Coolify detectará automaticamente o `Dockerfile` e fará o build.
@@ -68,16 +104,21 @@ O Coolify detectará automaticamente o `Dockerfile` e fará o build.
    - **Port:** 80
    - **Health Check Path:** `/health`
 
-3. **Variáveis de Ambiente (opcional):**
-   ```
+3. **Variáveis de Ambiente:**
+   ```env
    NODE_ENV=production
+   PORT=3001
    ```
 
-4. **Deploy:**
+4. **Volume Persistente (Importante!):**
+   - Source: `estrategia-viva-data`
+   - Destination: `/app/data`
+
+5. **Deploy:**
    - O Coolify fará automaticamente:
      - Build da aplicação com Vite
      - Criação da imagem Docker
-     - Deploy com Nginx
+     - Deploy com Nginx + Node.js
      - Configuração de SSL (se configurado)
 
 ### Build Manual com Docker

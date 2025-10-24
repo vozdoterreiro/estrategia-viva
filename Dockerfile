@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instalar dependências
-RUN npm ci
+RUN npm install
 
 # Copiar código fonte
 COPY . .
@@ -20,12 +20,12 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Instalar nginx
+# Instalar nginx e supervisor
 RUN apk add --no-cache nginx supervisor
 
 # Copiar dependências do backend
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm install --production
 
 # Copiar arquivos necessários
 COPY server.js ./
