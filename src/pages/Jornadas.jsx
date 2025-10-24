@@ -197,87 +197,179 @@ function Diagnostico() {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <Link to="/jornadas" className="text-secondary hover:text-secondary-dark mb-6 inline-block">
+          <Link to="/jornadas" className="text-secondary hover:text-secondary-dark mb-6 inline-block font-semibold">
             ← Voltar para Jornadas
           </Link>
           
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">
-            🧬 Diagnóstico de DNA
-          </h1>
-          
-          <p className="text-xl text-muted-foreground mb-12">
-            Entenda a essência da sua organização antes de transformá-la
-          </p>
+          <div className="bg-gradient-to-br from-purple-600 to-purple-700 text-white rounded-2xl p-8 md:p-12 mb-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex-1">
+                <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur flex items-center justify-center mb-4">
+                  <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h1 className="text-3xl md:text-5xl font-heading font-bold mb-4">
+                  Diagnóstico de DNA Organizacional
+                </h1>
+                <p className="text-xl opacity-90 mb-4">
+                  Descubra EXATAMENTE Por Que Sua Organização Não Cresce
+                </p>
+                <p className="text-lg opacity-80">
+                  87% dos clientes identificam causas-raiz de problemas que custavam milhões
+                </p>
+              </div>
+              <div className="text-center md:text-right">
+                <div className="bg-white/10 backdrop-blur rounded-xl p-6">
+                  <p className="text-sm opacity-80 mb-2">Investimento</p>
+                  <p className="text-3xl font-bold mb-4">R$ 20.000</p>
+                  <div className="flex items-center justify-center md:justify-end gap-2 text-sm opacity-80 mb-3">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>4-6 semanas</span>
+                  </div>
+                  <div className="pt-3 border-t border-white/20">
+                    <p className="text-xs opacity-90">✓ Relatório 60+ páginas</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <div className="bg-white rounded-lg shadow-soft p-8 mb-8">
-            <h2 className="text-2xl font-heading font-bold text-primary mb-4">O que é?</h2>
-            <p className="text-foreground leading-relaxed mb-4">
-              O Diagnóstico de DNA é uma imersão profunda na identidade organizacional. 
-              Vamos além de pesquisas de clima e análises superficiais para mapear as forças 
-              vitais que realmente movem sua organização.
-            </p>
-            <p className="text-foreground leading-relaxed">
-              Identificamos padrões culturais invisíveis, estruturas de poder ocultas, 
-              crenças limitantes e potenciais não explorados.
+          {/* Badge de urgência */}
+          <div className="bg-purple-50 border-2 border-purple-500 rounded-lg p-4 text-center mb-8">
+            <p className="text-purple-700 font-bold">
+              🔬 Apenas 1 vaga disponível em Novembro/2025 • Processo altamente customizado
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white rounded-lg shadow-soft p-6">
-              <h3 className="text-xl font-heading font-bold text-secondary mb-4">Como funciona</h3>
-              <ul className="space-y-3 text-foreground">
-                <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
-                  <span>Entrevistas em profundidade com lideranças</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
-                  <span>Mapeamento de narrativas organizacionais</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
-                  <span>Análise de estruturas e processos</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
-                  <span>Workshop de síntese com time executivo</span>
-                </li>
-              </ul>
+            <div className="bg-white rounded-xl shadow-soft p-8">
+              <h2 className="text-2xl font-heading font-bold text-primary mb-4">
+                Sintomas de uma Organização Doente
+              </h2>
+              <div className="space-y-4 text-foreground leading-relaxed">
+                <p className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold flex-shrink-0">✗</span>
+                  <span>Crescimento estagnado há +2 anos (mesmas métricas)</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold flex-shrink-0">✗</span>
+                  <span>Turnover acima de 20%/ano (sangria de talentos)</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold flex-shrink-0">✗</span>
+                  <span>Cultura tóxica ou desengajamento crônico</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold flex-shrink-0">✗</span>
+                  <span>Lideranças sem clareza sobre próximos passos</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <span className="text-red-500 font-bold flex-shrink-0">✗</span>
+                  <span>Transformações anteriores falharam</span>
+                </p>
+                <div className="bg-purple-50 border-l-4 border-purple-500 p-4 mt-6">
+                  <p className="font-bold text-purple-900">
+                    ✓ Nossa solução: Raio-X cultural completo que revela padrões invisíveis custando milhões
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-soft p-6">
-              <h3 className="text-xl font-heading font-bold text-secondary mb-4">O que você recebe</h3>
-              <ul className="space-y-3 text-foreground">
-                <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
-                  <span>Mapa completo do DNA Organizacional</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
-                  <span>Diagnóstico Cultural em profundidade</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
-                  <span>Análise de Vitalidade Organizacional</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
-                  <span>Recomendações estratégicas personalizadas</span>
-                </li>
+            <div className="bg-white rounded-xl shadow-soft p-8">
+              <h3 className="text-xl font-heading font-bold text-secondary mb-4">
+                O Que Você Vai Descobrir
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  'Pontos cegos que travam crescimento',
+                  'DNA real da cultura (não o discurso oficial)',
+                  'Estruturas de poder ocultas',
+                  'Padrões disfuncionais repetitivos',
+                  'Potenciais não explorados',
+                  'Roadmap claro de onde investir'
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start text-foreground">
+                    <svg className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="font-semibold">{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-secondary to-secondary-dark text-white rounded-xl p-8 text-center mb-8">
-            <div className="flex flex-col md:flex-row items-center justify-around gap-6">
-              <div>
-                <p className="text-sm opacity-80 mb-1">⏱️ Duração</p>
-                <p className="text-2xl font-bold">4-6 semanas</p>
+          <div className="bg-white rounded-xl shadow-soft p-8 mb-8">
+            <h2 className="text-2xl font-heading font-bold text-primary mb-6">
+              Metodologia em 4 Fases
+            </h2>
+            <div className="space-y-6">
+              {[
+                {
+                  fase: 1,
+                  titulo: 'Imersão Antropológica',
+                  duracao: 'Semana 1-2',
+                  descricao: 'Entrevistas em profundidade com 15-25 pessoas (lideranças, colaboradores, stakeholders). Observação participante de rituais e dinâmicas. Análise documental.'
+                },
+                {
+                  fase: 2,
+                  titulo: 'Mapeamento das 4 Forças Vitais',
+                  duracao: 'Semana 2-3',
+                  descricao: 'Decodificação de Alma (propósito), Ponte (estruturas), Raízes (cultura) e Seiva (processos). Identificação de padrões inconscientes.'
+                },
+                {
+                  fase: 3,
+                  titulo: 'Análise e Síntese',
+                  duracao: 'Semana 4-5',
+                  descricao: 'Cruzamento de dados qualitativos. Identificação de pontos de alavancagem. Criação do relatório executivo (60+ páginas).'
+                },
+                {
+                  fase: 4,
+                  titulo: 'Apresentação Estratégica',
+                  duracao: 'Semana 6',
+                  descricao: 'Workshop de 4 horas com lideranças. Apresentação de descobertas. Co-criação de roadmap priorizado. Definição de próximos passos.'
+                }
+              ].map((etapa, index) => (
+                <div key={index} className="flex gap-4 group">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-purple-600 text-white font-bold flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {etapa.fase}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-baseline gap-2 mb-2">
+                      <h4 className="font-bold text-lg text-foreground">{etapa.titulo}</h4>
+                      <span className="text-sm text-muted-foreground">({etapa.duracao})</span>
+                    </div>
+                    <p className="text-foreground leading-relaxed">{etapa.descricao}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl p-8 md:p-12 text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">
+              Entregáveis do Diagnóstico
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-8">
+              <div className="bg-white/10 backdrop-blur rounded-lg p-6">
+                <div className="text-3xl mb-3">📊</div>
+                <p className="font-bold mb-2">Relatório Executivo</p>
+                <p className="text-sm opacity-90">60+ páginas com descobertas, dados e recomendações</p>
               </div>
-              <div className="hidden md:block w-px h-16 bg-white/30"></div>
-              <div>
-                <p className="text-sm opacity-80 mb-1">💰 Investimento</p>
-                <p className="text-2xl font-bold">A partir de R$ 20.000</p>
+              <div className="bg-white/10 backdrop-blur rounded-lg p-6">
+                <div className="text-3xl mb-3">🗺️</div>
+                <p className="font-bold mb-2">Mapa de DNA</p>
+                <p className="text-sm opacity-90">Visualização das 4 Forças Vitais e interdependências</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur rounded-lg p-6">
+                <div className="text-3xl mb-3">🎯</div>
+                <p className="font-bold mb-2">Roadmap Estratégico</p>
+                <p className="text-sm opacity-90">Plano priorizado de onde intervir para máximo impacto</p>
               </div>
             </div>
           </div>
@@ -289,13 +381,13 @@ function Diagnostico() {
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-all shadow-medium text-center"
             >
-              💬 Solicitar Orçamento via WhatsApp
+              Solicitar Orçamento via WhatsApp
             </a>
             <Link
               to="/contato"
               className="inline-block px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:bg-secondary-dark transition-all shadow-medium text-center"
             >
-              📧 Solicitar Proposta Detalhada
+              Solicitar Proposta Detalhada
             </Link>
           </div>
         </div>

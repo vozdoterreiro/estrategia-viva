@@ -13,13 +13,31 @@ export default function Dashboard() {
   })
 
   useEffect(() => {
-    // Carrega submissões do localStorage ou API
+    // Carrega submissões do PostgreSQL via API
     const loadSubmissions = async () => {
       try {
-        // Tenta carregar do arquivo JSON
-        const response = await fetch('/data/submissions.json')
+        // Tenta carregar do PostgreSQL primeiro
+        const response = await fetch('/api/getLeads')
+        
         if (response.ok) {
-          const data = await response.json()
+          const result = await response.json()
+          if (result.success && result.data) {
+            setSubmissions(result.data.leads)
+            setStats({
+              totalLeads: result.data.stats.totalLeads,
+              thisMonth: result.data.stats.thisMonth,
+              lastMonth: result.data.stats.lastMonth,
+              conversionRate: result.data.stats.conversionRate
+            })
+            setLoading(false)
+            return
+          }
+        }
+        
+        // Fallback: tenta carregar do arquivo JSON
+        const jsonResponse = await fetch('/data/submissions.json')
+        if (jsonResponse.ok) {
+          const data = await jsonResponse.json()
           // Filtra apenas contatos (não newsletters)
           const contacts = data.filter(item => item.type === 'contact')
           setSubmissions(contacts)
@@ -27,11 +45,10 @@ export default function Dashboard() {
         }
       } catch (error) {
         console.error('Erro ao carregar submissões:', error)
-        // Fallback: cria dados de exemplo se o arquivo não existir
+        // Fallback: cria dados de exemplo se ambos falharem
         const mockData = [
           {
             timestamp: new Date().toISOString(),
-            type: 'contact',
             name: 'Lead de Exemplo',
             email: 'exemplo@empresa.com',
             company: 'Empresa Exemplo',

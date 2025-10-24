@@ -27,7 +27,38 @@ export default function Contato() {
     setSubmitStatus({ show: false, type: '', message: '' })
     
     try {
-      // Salvar no backend (se disponível)
+      // Salvar no PostgreSQL via API
+      try {
+        const response = await fetch('/api/saveToDatabase', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            type: 'contact',
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            interest: formData.interest,
+            message: formData.message,
+          }),
+        })
+
+        if (!response.ok) {
+          const errorData = await response.json()
+          console.error('Error saving to database:', errorData)
+          // Continua mesmo se falhar o banco (não bloqueia o WhatsApp)
+        } else {
+          const data = await response.json()
+          console.log('Lead saved to database:', data)
+        }
+      } catch (error) {
+        console.error('Database API error:', error)
+        // Continua mesmo se falhar (não bloqueia o WhatsApp)
+      }
+
+      // Também salvar no arquivo JSON como backup (compatibilidade)
       try {
         await fetch('/api/contact', {
           method: 'POST',
@@ -40,7 +71,7 @@ export default function Contato() {
           }),
         })
       } catch (error) {
-        console.log('Backend não disponível, continuando com WhatsApp')
+        console.log('JSON backup não disponível')
       }
 
       // Mostrar mensagem de sucesso
