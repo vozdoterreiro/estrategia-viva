@@ -16,7 +16,9 @@ export default function Contato() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     
-    // Salvar no banco de dados
+    // Temporariamente desabilitado (sem backend)
+    // TODO: Reativar quando backend estiver em produção
+    /*
     try {
       await fetch('/api/contact', {
         method: 'POST',
@@ -31,6 +33,7 @@ export default function Contato() {
     } catch (error) {
       console.error('Error saving form:', error)
     }
+    */
     
     // Formata mensagem para WhatsApp
     const whatsappMessage = `

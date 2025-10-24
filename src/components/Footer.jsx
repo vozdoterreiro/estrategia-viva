@@ -9,6 +9,13 @@ export default function Footer() {
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault()
     
+    // Temporariamente desabilitado (sem backend)
+    setStatus('success')
+    setEmail('')
+    setTimeout(() => setStatus(''), 3000)
+    
+    // TODO: Reativar quando backend estiver em produção
+    /*
     try {
       const response = await fetch('/api/newsletter', {
         method: 'POST',
@@ -31,6 +38,7 @@ export default function Footer() {
     } catch (error) {
       setStatus('error')
     }
+    */
   }
 
   return (
