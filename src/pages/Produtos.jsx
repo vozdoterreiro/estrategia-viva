@@ -214,12 +214,12 @@ function DecodificacaoAlma() {
               ← Voltar para Produtos
             </Link>
             
-            <div className="bg-gradient-to-br from-orange-600 to-orange-700 text-white rounded-2xl p-8 md:p-12 mb-8">
+            <div className="bg-gradient-to-br from-primary/90 to-primary text-white rounded-2xl p-8 md:p-12 mb-8">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex-1">
                   <div className="mb-4">
                     <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="32" cy="32" r="32" fill="url(#flame-gradient)" opacity="0.2"/>
+                      <circle cx="32" cy="32" r="32" fill="url(#flame-gradient)" opacity="0.15"/>
                       <path d="M32 10C32 10 20 22 20 32C20 38.627 25.373 44 32 44C38.627 44 44 38.627 44 32C44 22 32 10 32 10Z" fill="white" opacity="0.9"/>
                       <path d="M32 20C32 20 26 26 26 32C26 35.314 28.686 38 32 38C35.314 38 38 35.314 38 32C38 26 32 20 32 20Z" fill="white"/>
                       <defs>
@@ -243,7 +243,7 @@ function DecodificacaoAlma() {
               <div className="text-center md:text-right">
                 <div className="bg-white/10 backdrop-blur rounded-xl p-6">
                   <p className="text-sm opacity-80 mb-2">Investimento</p>
-                  <p className="text-3xl font-bold mb-4">R$ 9k - R$ 18k</p>
+                  <p className="text-3xl font-bold mb-4">A partir de R$ 9k</p>
                   <p className="text-sm opacity-80">⏱️ 5 semanas</p>
                 </div>
               </div>
@@ -438,12 +438,12 @@ function PonteDigital() {
             ← Voltar para Produtos
           </Link>
           
-          <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-2xl p-8 md:p-12 mb-8">
+          <div className="bg-gradient-to-br from-secondary/90 to-secondary text-white rounded-2xl p-8 md:p-12 mb-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex-1">
                 <div className="mb-4">
                   <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="32" cy="32" r="32" fill="url(#globe-gradient)" opacity="0.2"/>
+                    <circle cx="32" cy="32" r="32" fill="url(#globe-gradient)" opacity="0.15"/>
                     <circle cx="32" cy="32" r="18" stroke="white" strokeWidth="2" opacity="0.9"/>
                     <ellipse cx="32" cy="32" rx="8" ry="18" stroke="white" strokeWidth="2" opacity="0.9"/>
                     <line x1="14" y1="32" x2="50" y2="32" stroke="white" strokeWidth="2" opacity="0.9"/>
@@ -470,7 +470,7 @@ function PonteDigital() {
               <div className="text-center md:text-right">
                 <div className="bg-white/10 backdrop-blur rounded-xl p-6">
                   <p className="text-sm opacity-80 mb-2">Investimento</p>
-                  <p className="text-3xl font-bold mb-4">R$ 15k - R$ 35k</p>
+                  <p className="text-3xl font-bold mb-4">A partir de R$ 15k</p>
                   <p className="text-sm opacity-80">⏱️ 8 semanas</p>
                 </div>
               </div>
@@ -679,12 +679,12 @@ function InteligenciaSimbiotica() {
             ← Voltar para Produtos
           </Link>
           
-          <div className="bg-gradient-to-br from-green-600 to-green-700 text-white rounded-2xl p-8 md:p-12 mb-8">
+          <div className="bg-gradient-to-br from-primary/90 to-primary-dark text-white rounded-2xl p-8 md:p-12 mb-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex-1">
                 <div className="mb-4">
                   <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="32" cy="32" r="32" fill="url(#bulb-gradient)" opacity="0.2"/>
+                    <circle cx="32" cy="32" r="32" fill="url(#bulb-gradient)" opacity="0.15"/>
                     <circle cx="32" cy="26" r="10" stroke="white" strokeWidth="2.5" opacity="0.9"/>
                     <path d="M26 36C26 36 26 38 28 40H36C38 38 38 36 38 36" stroke="white" strokeWidth="2.5" strokeLinecap="round" opacity="0.9"/>
                     <line x1="32" y1="42" x2="32" y2="46" stroke="white" strokeWidth="2.5" strokeLinecap="round" opacity="0.9"/>
