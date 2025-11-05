@@ -27,9 +27,9 @@ export default function EstudoDeCaso() {
             {/* Logo e Intro */}
             <div className="text-center mb-12">
               <img 
-                src="/images/case/logo-vdt.jpeg" 
+                src="/images/case/logo-vdt.png" 
                 alt="Voz do Terreiro Logo" 
-                className="w-48 h-48 object-contain mx-auto mb-6 rounded-xl shadow-soft"
+                className="w-64 h-auto object-contain mx-auto mb-6"
               />
               <h2 className="text-3xl font-heading font-bold text-primary mb-4">
                 Voz do Terreiro
@@ -147,31 +147,104 @@ export default function EstudoDeCaso() {
                 </div>
               </div>
 
-              {/* Galeria de Imagens dos Eventos */}
+              {/* História do Evento IPHAN - Cidades-Terreiro */}
+              <div className="mb-8 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 border-l-4 border-amber-500">
+                <h3 className="text-2xl font-heading font-bold text-amber-900 mb-4">
+                  Case Destaque: Cidades-Terreiro IPHAN
+                </h3>
+                <p className="text-foreground leading-relaxed mb-4">
+                  Em parceria com o <strong>IPHAN (Instituto do Patrimônio Histórico e Artístico Nacional)</strong>, 
+                  a Voz do Terreiro realizou o evento <strong>"Cidades-Terreiro: Memórias, Territórios e Resistências"</strong>, 
+                  uma celebração da cultura afro-brasileira como patrimônio imaterial do Brasil.
+                </p>
+                <p className="text-foreground leading-relaxed mb-4">
+                  O evento reuniu lideranças religiosas, artistas, pesquisadores e comunidades tradicionais 
+                  de terreiro de todo o país para discutir a preservação dos territórios sagrados, o combate 
+                  à intolerância religiosa e a valorização das tradições de matriz africana.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                  <div className="bg-white rounded-lg p-6 shadow-soft">
+                    <h4 className="font-bold text-amber-900 mb-3">Objetivos</h4>
+                    <ul className="space-y-2 text-sm text-foreground">
+                      <li>• Fortalecer redes de proteção aos terreiros</li>
+                      <li>• Documentar memórias e práticas ancestrais</li>
+                      <li>• Promover diálogo entre gerações</li>
+                      <li>• Amplificar vozes das comunidades tradicionais</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white rounded-lg p-6 shadow-soft">
+                    <h4 className="font-bold text-amber-900 mb-3">Impacto</h4>
+                    <ul className="space-y-2 text-sm text-foreground">
+                      <li>• 200+ participantes presenciais</li>
+                      <li>• 15 comunidades de terreiro representadas</li>
+                      <li>• Cobertura em 8 veículos de mídia</li>
+                      <li>• Documentário com 3 depoimentos filmados</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <p className="text-foreground leading-relaxed italic">
+                  "Este evento foi um marco na luta pela preservação dos territórios sagrados. 
+                  A parceria com o IPHAN legitimou nossas vozes e deu visibilidade nacional 
+                  às questões que enfrentamos diariamente nas comunidades de terreiro."
+                </p>
+              </div>
+
+              {/* Depoimentos em Vídeo */}
               <div className="mb-8">
                 <h3 className="text-xl font-heading font-bold text-secondary mb-4">
-                  Eventos e Ativações
+                  Vozes da Comunidade: Depoimentos
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <img 
-                    src="/images/case/evento-1.jpeg" 
-                    alt="Evento Voz do Terreiro 1" 
-                    className="w-full h-64 object-cover rounded-lg shadow-medium hover:shadow-large transition-shadow"
-                  />
-                  <img 
-                    src="/images/case/evento-2.jpeg" 
-                    alt="Evento Voz do Terreiro 2" 
-                    className="w-full h-64 object-cover rounded-lg shadow-medium hover:shadow-large transition-shadow"
-                  />
-                  <img 
-                    src="/images/case/evento-3.jpeg" 
-                    alt="Evento Voz do Terreiro 3" 
-                    className="w-full h-64 object-cover rounded-lg shadow-medium hover:shadow-large transition-shadow"
-                  />
-                </div>
-                <p className="text-sm text-muted-foreground text-center mt-4">
-                  Eventos presenciais com mais de 200 participantes, celebrando ancestralidade e cultura viva
+                <p className="text-muted-foreground mb-6">
+                  Assista aos depoimentos de lideranças e participantes do evento Cidades-Terreiro
                 </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-white rounded-lg shadow-medium overflow-hidden">
+                    <video 
+                      controls 
+                      className="w-full h-64 object-cover bg-black"
+                      poster="/images/case/evento-1.jpeg"
+                    >
+                      <source src="/images/case/depoimento-daua-puri.mp4" type="video/mp4" />
+                      Seu navegador não suporta vídeo.
+                    </video>
+                    <div className="p-4">
+                      <h4 className="font-bold text-foreground mb-1">Daua Puri</h4>
+                      <p className="text-sm text-muted-foreground">Liderança indígena e ativista cultural</p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg shadow-medium overflow-hidden">
+                    <video 
+                      controls 
+                      className="w-full h-64 object-cover bg-black"
+                      poster="/images/case/evento-2.jpeg"
+                    >
+                      <source src="/images/case/depoimento-juliana.mp4" type="video/mp4" />
+                      Seu navegador não suporta vídeo.
+                    </video>
+                    <div className="p-4">
+                      <h4 className="font-bold text-foreground mb-1">Juliana</h4>
+                      <p className="text-sm text-muted-foreground">Yalorixá e guardiã de tradições</p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-lg shadow-medium overflow-hidden">
+                    <video 
+                      controls 
+                      className="w-full h-64 object-cover bg-black"
+                      poster="/images/case/evento-3.jpeg"
+                    >
+                      <source src="/images/case/depoimento-negrogun.mp4" type="video/mp4" />
+                      Seu navegador não suporta vídeo.
+                    </video>
+                    <div className="p-4">
+                      <h4 className="font-bold text-foreground mb-1">Negrogun</h4>
+                      <p className="text-sm text-muted-foreground">Artista e educador afro-brasileiro</p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="bg-gradient-to-r from-primary to-primary-dark text-white rounded-lg p-8">
