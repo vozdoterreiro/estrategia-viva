@@ -222,16 +222,8 @@ function Diagnostico() {
               <div className="text-center md:text-right">
                 <div className="bg-white/10 backdrop-blur rounded-xl p-6">
                   <p className="text-sm opacity-80 mb-2">Investimento</p>
-                  <p className="text-3xl font-bold mb-4">R$ 20.000</p>
-                  <div className="flex items-center justify-center md:justify-end gap-2 text-sm opacity-80 mb-3">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>4-6 semanas</span>
-                  </div>
-                  <div className="pt-3 border-t border-white/20">
-                    <p className="text-xs opacity-90">✓ Relatório 60+ páginas</p>
-                  </div>
+                  <p className="text-3xl font-bold mb-4">A partir de R$ 20.000</p>
+                  <p className="text-sm opacity-80">⏱️ 4-6 semanas</p>
                 </div>
               </div>
             </div>

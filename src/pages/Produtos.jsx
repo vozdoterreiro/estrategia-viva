@@ -18,7 +18,7 @@ function ProdutosHome() {
       subtitulo: 'Branding e Identidade Estratégica',
       descricao: 'Sua marca não atrai os clientes certos? Você se posiciona como commodity? Pare de competir por preço. Revelamos a identidade única da sua organização através de uma imersão antropológica profunda, transformando sua essência em uma marca magnética que atrai naturalmente seu público ideal.',
       beneficios: ['Aumente o ticket médio em até 40%', 'Reduza o ciclo de vendas pela metade', 'Diferencie-se radicalmente da concorrência', 'Construa autoridade no seu mercado'],
-      preco: 'R$ 9.000',
+      preco: 'A partir de R$ 9.000',
       duracao: '5 semanas',
       entregas: ['Logo completo com 6+ variações', 'Paleta de cores estratégica + Tipografia profissional', 'Brand Guide completo (40+ páginas)', 'Tom de Voz e Mensagens-chave', 'Templates para redes sociais', 'Apresentação de implementação'],
       ideal: ['Startups que precisam se posicionar como líderes', 'Empresas confundidas com concorrentes genéricos', 'Negócios que competem apenas por preço', 'Organizações em rebranding estratégico'],
@@ -37,7 +37,7 @@ function ProdutosHome() {
       subtitulo: 'Website que Converte Visitantes em Leads',
       descricao: 'Seu site está perdendo 90% dos visitantes? Parece igual aos concorrentes? Nós não criamos sites bonitos e inúteis. Arquitetamos seu principal habitat digital: cada seção, cada palavra, cada CTA é estrategicamente posicionado para transformar visitantes em leads qualificados e leads em clientes.',
       beneficios: ['Multiplique sua taxa de conversão em 3-5x', 'Gere leads qualificados em piloto automático', 'Reduza custo de aquisição de clientes', 'Apareça no Google para buscas estratégicas'],
-      preco: 'R$ 15.000',
+      preco: 'A partir de R$ 15.000',
       duracao: '8 semanas',
       entregas: ['Website responsivo (até 8 páginas estratégicas)', 'Design UI/UX otimizado para conversão', 'Copywriting persuasivo profissional', 'SEO on-page completo', 'Integrações com ferramentas (CRM, Analytics, WhatsApp)', 'Treinamento completo para gestão', '30 dias de suporte pós-lançamento'],
       ideal: ['Empresas sem presença digital profissional', 'Sites desatualizados que não geram leads', 'Negócios dependentes de indicação', 'Marcas que querem escalar digitalmente'],
@@ -56,7 +56,7 @@ function ProdutosHome() {
       subtitulo: 'IA que Qualifica Leads Enquanto Você Dorme',
       descricao: 'Sua equipe perde tempo com leads desqualificados? Respostas demoram horas e vendas esfriam? Nossa IA trabalha 24/7 qualificando contatos, respondendo dúvidas complexas e agendando reuniões apenas com prospects prontos para comprar. É como ter 3 SDRs trabalhando sem parar, mas custando 90% menos.',
       beneficios: ['Economize 15-20h/semana da equipe comercial', 'Resposta instantânea = mais vendas', 'Qualifique 100% dos leads automaticamente', 'Aumente taxa de agendamento em 60%'],
-      preco: 'R$ 12.000',
+      preco: 'A partir de R$ 12.000',
       duracao: '4 semanas',
       entregas: ['Chatbot conversacional OU Sequência de e-mails inteligente', 'Personalidade e tom de voz customizados', 'Integração com seu CRM/planilhas', 'Dashboard de performance e métricas', 'Scripts de qualificação otimizados', '60 dias de otimização contínua baseada em dados'],
       ideal: ['Empresas com alto volume de contatos não qualificados', 'Times comerciais sobrecarregados', 'Negócios B2B com ciclo de vendas longo', 'Startups com equipe enxuta'],
@@ -126,7 +126,7 @@ function ProdutosHome() {
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-muted-foreground font-semibold">Investimento:</span>
-                  <span className="font-bold text-secondary text-lg">A partir de {produto.preco}</span>
+                  <span className="font-bold text-secondary text-lg">{produto.preco}</span>
                 </div>
               </div>
               
@@ -334,50 +334,27 @@ function DecodificacaoAlma() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6">
-              <h3 className="text-xl font-heading font-bold text-green-900 mb-4 flex items-center gap-2">
-                <span className="text-2xl">✓</span> O que ESTÁ incluso
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  'Workshop de Imersão (3 horas)',
-                  'Conceito de Marca estratégico',
-                  'Logo principal + variações (vertical, horizontal, ícone)',
-                  'Paleta de cores completa',
-                  'Seleção de tipografia',
-                  'Definição de Tom de Voz',
-                  'Brand Guide completo (PDF)',
-                  '2 rodadas de revisão'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start text-green-900">
-                    <span className="text-green-600 mr-2 flex-shrink-0">✓</span>
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6">
-              <h3 className="text-xl font-heading font-bold text-red-900 mb-4 flex items-center gap-2">
-                <span className="text-2xl">✗</span> O que NÃO está incluso
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  'Processo de Naming (criação de nome)',
-                  'Registro de marca',
-                  'Design de papelaria (cartões, etc)',
-                  'Criação de conteúdo (copywriting)',
-                  'Fotografia ou produção de vídeo',
-                  'Revisões além das 2 incluídas'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start text-red-900">
-                    <span className="text-red-600 mr-2 flex-shrink-0">✗</span>
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 mb-8">
+            <h3 className="text-xl font-heading font-bold text-green-900 mb-4 flex items-center gap-2">
+              <span className="text-2xl">✓</span> O que ESTÁ incluso
+            </h3>
+            <ul className="space-y-2">
+              {[
+                'Workshop de Imersão (3 horas)',
+                'Conceito de Marca estratégico',
+                'Logo principal + variações (vertical, horizontal, ícone)',
+                'Paleta de cores completa',
+                'Seleção de tipografia',
+                'Definição de Tom de Voz',
+                'Brand Guide completo (PDF)',
+                '2 rodadas de revisão'
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-start text-green-900">
+                  <span className="text-green-600 mr-2 flex-shrink-0">✓</span>
+                  <span className="text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="bg-gradient-to-r from-secondary to-secondary-dark text-white rounded-xl p-8 text-center mb-8">
@@ -571,50 +548,27 @@ function PonteDigital() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6">
-              <h3 className="text-xl font-heading font-bold text-green-900 mb-4 flex items-center gap-2">
-                <span className="text-2xl">✓</span> O que ESTÁ incluso
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  'Workshop de Arquitetura (3 horas)',
-                  'Design UI/UX de até 6 páginas',
-                  'Desenvolvimento responsivo (mobile/tablet/desktop)',
-                  'SEO on-page (títulos, meta tags, URLs)',
-                  'Integração Google Analytics',
-                  'Formulários de contato',
-                  'Sessão de treinamento (1.5h)',
-                  'Gravação do treinamento'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start text-green-900">
-                    <span className="text-green-600 mr-2 flex-shrink-0">✓</span>
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6">
-              <h3 className="text-xl font-heading font-bold text-red-900 mb-4 flex items-center gap-2">
-                <span className="text-2xl">✗</span> O que NÃO está incluso
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  'Produção de conteúdo (textos e fotos)',
-                  'Funcionalidades complexas (e-commerce, membros)',
-                  'Hospedagem e domínio',
-                  'Licenças de plugins premium',
-                  'Manutenção contínua pós-lançamento',
-                  'Páginas além das 6 incluídas'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start text-red-900">
-                    <span className="text-red-600 mr-2 flex-shrink-0">✗</span>
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 mb-8">
+            <h3 className="text-xl font-heading font-bold text-green-900 mb-4 flex items-center gap-2">
+              <span className="text-2xl">✓</span> O que ESTÁ incluso
+            </h3>
+            <ul className="space-y-2">
+              {[
+                'Workshop de Arquitetura (3 horas)',
+                'Design UI/UX de até 6 páginas',
+                'Desenvolvimento responsivo (mobile/tablet/desktop)',
+                'SEO on-page (títulos, meta tags, URLs)',
+                'Integração Google Analytics',
+                'Formulários de contato',
+                'Sessão de treinamento (1.5h)',
+                'Gravação do treinamento'
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-start text-green-900">
+                  <span className="text-green-600 mr-2 flex-shrink-0">✓</span>
+                  <span className="text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="bg-gradient-to-r from-secondary to-secondary-dark text-white rounded-xl p-8 text-center mb-8">
@@ -858,48 +812,26 @@ function InteligenciaSimbiotica() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6">
-              <h3 className="text-xl font-heading font-bold text-green-900 mb-4 flex items-center gap-2">
-                <span className="text-2xl">✓</span> O que ESTÁ incluso
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  'Workshop de Mapeamento (2 horas)',
-                  '1 automação à escolha (Chat OU E-mail)',
-                  'Treinamento da IA com seus dados',
-                  'Design da Personalidade da IA',
-                  'Dashboard de performance',
-                  '30 dias de acompanhamento e ajustes',
-                  'Guia de Personalidade da IA (documento)'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start text-green-900">
-                    <span className="text-green-600 mr-2 flex-shrink-0">✓</span>
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6">
-              <h3 className="text-xl font-heading font-bold text-red-900 mb-4 flex items-center gap-2">
-                <span className="text-2xl">✗</span> O que NÃO está incluso
-              </h3>
-              <ul className="space-y-2">
-                {[
-                  'Custo de licença das ferramentas (variável)',
-                  'Criação de todo o conteúdo (e-mails, materiais)',
-                  'Gestão de campanhas de tráfego pago',
-                  'Monitoramento contínuo após 30 dias',
-                  'Integrações complexas com sistemas legados'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start text-red-900">
-                    <span className="text-red-600 mr-2 flex-shrink-0">✗</span>
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 mb-8">
+            <h3 className="text-xl font-heading font-bold text-green-900 mb-4 flex items-center gap-2">
+              <span className="text-2xl">✓</span> O que ESTÁ incluso
+            </h3>
+            <ul className="space-y-2">
+              {[
+                'Workshop de Mapeamento (2 horas)',
+                '1 automação à escolha (Chat OU E-mail)',
+                'Treinamento da IA com seus dados',
+                'Design da Personalidade da IA',
+                'Dashboard de performance',
+                '30 dias de acompanhamento e ajustes',
+                'Guia de Personalidade da IA (documento)'
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-start text-green-900">
+                  <span className="text-green-600 mr-2 flex-shrink-0">✓</span>
+                  <span className="text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="bg-blue-50 border-2 border-blue-300 rounded-xl p-6 mb-8">
