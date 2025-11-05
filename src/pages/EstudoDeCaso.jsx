@@ -26,17 +26,32 @@ export default function EstudoDeCaso() {
             
             {/* Logo e Intro */}
             <div className="text-center mb-12">
-              <img 
-                src="/images/case/logo-vdt.png" 
-                alt="Voz do Terreiro Logo" 
-                className="w-64 h-auto object-contain mx-auto mb-6"
-              />
-              <h2 className="text-3xl font-heading font-bold text-primary mb-4">
-                Voz do Terreiro
-              </h2>
-              <p className="text-xl text-muted-foreground">
+              <a 
+                href="https://vozdoterreiro.com.br/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block hover:opacity-80 transition-opacity"
+              >
+                <img 
+                  src="/images/case/logo-vdt.png" 
+                  alt="Voz do Terreiro Logo" 
+                  className="w-64 h-auto object-contain mx-auto mb-4"
+                />
+              </a>
+              <p className="text-xl text-muted-foreground mb-2">
                 Preservando culturas ancestrais através da inovação digital
               </p>
+              <a 
+                href="https://vozdoterreiro.com.br/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-secondary hover:text-secondary-dark font-semibold inline-flex items-center gap-2"
+              >
+                Visite o site
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
 
             <div className="bg-white rounded-lg shadow-soft p-8 mb-8">
