@@ -32,31 +32,31 @@ export default function Home() {
       />
 
       {/* Problema - Dor do Cliente */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center gap-2 bg-red-50 border border-red-200 rounded-full px-6 py-2 mb-6">
-                <svg className="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+            <div className="text-center mb-8 md:mb-12">
+              <div className="inline-flex items-center justify-center gap-2 bg-red-50 border border-red-200 rounded-full px-4 md:px-6 py-2 mb-4 md:mb-6">
+                <svg className="w-4 h-4 md:w-5 md:h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                 </svg>
-                <span className="text-red-700 font-bold text-sm">Problema Crítico</span>
+                <span className="text-red-700 font-bold text-xs md:text-sm">Problema Crítico</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary mb-3 md:mb-4 px-2">
                 90% das Transformações Organizacionais Fracassam
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-lg md:text-xl text-muted-foreground px-2">
                 E a causa não é falta de planejamento. É tratar organismos vivos como máquinas.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg hover:shadow-md transition-shadow">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+              <div className="bg-red-50 border-l-4 border-red-500 p-4 md:p-6 rounded-r-lg hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-3">
-                  <svg className="w-6 h-6 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 md:w-6 md:h-6 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h3 className="font-bold text-lg text-gray-900">Mudanças Não Enraízam</h3>
+                  <h3 className="font-bold text-base md:text-lg text-gray-900">Mudanças Não Enraízam</h3>
                 </div>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   Sua equipe resiste, processos não funcionam, e em 6 meses tudo volta ao normal.

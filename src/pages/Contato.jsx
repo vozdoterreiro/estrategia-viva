@@ -150,32 +150,32 @@ export default function Contato() {
         }}
       />
       
-      <main className="py-16">
+      <main className="py-8 md:py-16">
         <section className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12">
               {/* Formulário */}
-              <div className="bg-white rounded-lg shadow-soft p-8">
-                <h2 className="text-2xl font-heading font-bold text-primary mb-6">
+              <div className="bg-white rounded-lg shadow-soft p-4 md:p-8">
+                <h2 className="text-xl md:text-2xl font-heading font-bold text-primary mb-4 md:mb-6">
                   Agende uma Conversa
                 </h2>
 
                 {/* Notificação de Status */}
                 {submitStatus.show && (
-                  <div className={`mb-6 p-4 rounded-lg border-2 ${
+                  <div className={`mb-4 md:mb-6 p-3 md:p-4 rounded-lg border-2 ${
                     submitStatus.type === 'success' 
                       ? 'bg-green-50 border-green-500 text-green-800' 
                       : 'bg-red-50 border-red-500 text-red-800'
                   } animate-fadeIn`}>
-                    <div className="flex items-start gap-3">
-                      <span className="text-2xl flex-shrink-0">
+                    <div className="flex items-start gap-2 md:gap-3">
+                      <span className="text-xl md:text-2xl flex-shrink-0">
                         {submitStatus.type === 'success' ? '✅' : '❌'}
                       </span>
                       <div>
-                        <p className="font-semibold mb-1">
+                        <p className="font-semibold mb-1 text-sm md:text-base">
                           {submitStatus.type === 'success' ? 'Sucesso!' : 'Erro'}
                         </p>
-                        <p className="text-sm leading-relaxed">
+                        <p className="text-xs md:text-sm leading-relaxed">
                           {submitStatus.message}
                         </p>
                       </div>
@@ -183,9 +183,9 @@ export default function Contato() {
                   </div>
                 )}
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
+                    <label htmlFor="name" className="block text-xs md:text-sm font-semibold text-foreground mb-2">
                       Nome completo *
                     </label>
                     <input
@@ -195,7 +195,7 @@ export default function Contato() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
+                      className="w-full px-3 md:px-4 py-2 md:py-3 text-sm md:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
                       placeholder="Seu nome"
                     />
                   </div>
