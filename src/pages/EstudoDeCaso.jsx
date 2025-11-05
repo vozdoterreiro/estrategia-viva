@@ -191,7 +191,7 @@ export default function EstudoDeCaso() {
                   <div className="bg-white rounded-lg p-6 shadow-soft">
                     <h4 className="font-bold text-amber-900 mb-3">Impacto</h4>
                     <ul className="space-y-2 text-sm text-foreground">
-                      <li>• 200+ participantes presenciais</li>
+                      <li>• 200+ participantes</li>
                       <li>• 15 comunidades de terreiro representadas</li>
                       <li>• Cobertura em 8 veículos de mídia</li>
                       <li>• Documentário com 3 depoimentos filmados</li>
@@ -219,8 +219,9 @@ export default function EstudoDeCaso() {
                     <video 
                       controls 
                       className="w-full h-64 object-cover bg-black"
+                      preload="metadata"
                     >
-                      <source src="/images/case/depoimento-daua-puri.mp4" type="video/mp4" />
+                      <source src="/images/case/depoimento-daua-puri.mp4#t=4" type="video/mp4" />
                       Seu navegador não suporta vídeo.
                     </video>
                     <div className="p-4">
@@ -233,8 +234,9 @@ export default function EstudoDeCaso() {
                     <video 
                       controls 
                       className="w-full h-64 object-cover bg-black"
+                      preload="metadata"
                     >
-                      <source src="/images/case/depoimento-juliana.mp4" type="video/mp4" />
+                      <source src="/images/case/depoimento-juliana.mp4#t=4" type="video/mp4" />
                       Seu navegador não suporta vídeo.
                     </video>
                     <div className="p-4">
@@ -247,8 +249,9 @@ export default function EstudoDeCaso() {
                     <video 
                       controls 
                       className="w-full h-64 object-cover bg-black"
+                      preload="metadata"
                     >
-                      <source src="/images/case/depoimento-negrogun.mp4" type="video/mp4" />
+                      <source src="/images/case/depoimento-negrogun.mp4#t=4" type="video/mp4" />
                       Seu navegador não suporta vídeo.
                     </video>
                     <div className="p-4">
