@@ -204,7 +204,6 @@ export default function EstudoDeCaso() {
                     <video 
                       controls 
                       className="w-full h-64 object-cover bg-black"
-                      poster="/images/case/evento-1.jpeg"
                     >
                       <source src="/images/case/depoimento-daua-puri.mp4" type="video/mp4" />
                       Seu navegador não suporta vídeo.
@@ -219,14 +218,13 @@ export default function EstudoDeCaso() {
                     <video 
                       controls 
                       className="w-full h-64 object-cover bg-black"
-                      poster="/images/case/evento-2.jpeg"
                     >
                       <source src="/images/case/depoimento-juliana.mp4" type="video/mp4" />
                       Seu navegador não suporta vídeo.
                     </video>
                     <div className="p-4">
-                      <h4 className="font-bold text-foreground mb-1">Juliana</h4>
-                      <p className="text-sm text-muted-foreground">Yalorixá e guardiã de tradições</p>
+                      <h4 className="font-bold text-foreground mb-1">Juliana Bonifácio</h4>
+                      <p className="text-sm text-muted-foreground">Empreendedora social</p>
                     </div>
                   </div>
                   
@@ -234,14 +232,13 @@ export default function EstudoDeCaso() {
                     <video 
                       controls 
                       className="w-full h-64 object-cover bg-black"
-                      poster="/images/case/evento-3.jpeg"
                     >
                       <source src="/images/case/depoimento-negrogun.mp4" type="video/mp4" />
                       Seu navegador não suporta vídeo.
                     </video>
                     <div className="p-4">
                       <h4 className="font-bold text-foreground mb-1">Negrogun</h4>
-                      <p className="text-sm text-muted-foreground">Artista e educador afro-brasileiro</p>
+                      <p className="text-sm text-muted-foreground">Presidente do Conselho Estadual dos Direitos do Negro</p>
                     </div>
                   </div>
                 </div>
