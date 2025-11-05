@@ -135,7 +135,7 @@ export default function Home() {
               {[
                 {
                   icon: (
-                    <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
                     </svg>
@@ -147,8 +147,8 @@ export default function Home() {
                 },
                 {
                   icon: (
-                    <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                     </svg>
                   ),
                   title: 'Conexões',
@@ -159,7 +159,7 @@ export default function Home() {
                 {
                   icon: (
                     <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                   ),
                   title: 'Nutrição',
@@ -227,20 +227,21 @@ export default function Home() {
               {[
                 {
                   icon: (
-                    <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
                     </svg>
                   ),
                   title: 'Decodificação da Alma',
                   subtitle: 'Branding Estratégico',
                   description: 'Identidade de marca que emerge da essência verdadeira da sua organização.',
                   deliverables: ['Brand DNA', 'Manifesto de marca', 'Guia visual', 'Tom de voz'],
-                  path: '/produtos/branding',
+                  path: '/produtos/decodificacao-alma',
                   color: 'from-orange-100 to-orange-50'
                 },
                 {
                   icon: (
-                    <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                     </svg>
                   ),
@@ -248,7 +249,7 @@ export default function Home() {
                   subtitle: 'Website Estratégico',
                   description: 'Site que converte visitantes em clientes, refletindo sua identidade única.',
                   deliverables: ['Design responsivo', 'Copywriting estratégico', 'SEO otimizado', 'CMS fácil'],
-                  path: '/produtos/website',
+                  path: '/produtos/ponte-digital',
                   color: 'from-blue-100 to-blue-50'
                 },
                 {
@@ -261,7 +262,7 @@ export default function Home() {
                   subtitle: 'Automação com IA',
                   description: 'Sistemas inteligentes que potencializam sua operação sem desumanizar.',
                   deliverables: ['Análise de processos', 'Agentes de IA', 'Integração sistemas', 'Treinamento'],
-                  path: '/produtos/ia',
+                  path: '/produtos/inteligencia-simbiotica',
                   color: 'from-green-100 to-green-50'
                 }
               ].map((produto, index) => (
@@ -463,7 +464,7 @@ export default function Home() {
                   title: 'Arquetipos Organizacionais',
                   excerpt: 'Descubra qual é o DNA profundo da sua empresa.',
                   readTime: '10 min',
-                  path: '/insights'
+                  path: '/insights/arquetipos-organizacionais'
                 }
               ].map((artigo, index) => (
                 <Link
