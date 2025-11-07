@@ -11,7 +11,7 @@ export default function Header() {
     { path: '/filosofia', label: 'Filosofia' },
     { path: '/jornadas', label: 'Jornadas' },
     { path: '/produtos', label: 'Produtos' },
-    { path: '/estudo-de-caso', label: 'Estudo de Caso' },
+    { path: '/caso-de-sucesso', label: 'Caso de Sucesso' },
     { path: '/insights', label: 'Insights' },
     { path: '/contato', label: 'Contato' },
   ]

@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HeroSection from '../components/HeroSection'
 
-export default function EstudoDeCaso() {
+export default function CasoDeSucesso() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -221,7 +221,7 @@ export default function EstudoDeCaso() {
                       className="w-full h-48 md:h-64 object-cover bg-black"
                       preload="metadata"
                     >
-                      <source src="/images/case/depoimento-daua-puri.mp4#t=4" type="video/mp4" />
+                      <source src="/images/case/depoimento-daua-puri.mp4#t=6" type="video/mp4" />
                       Seu navegador não suporta vídeo.
                     </video>
                     <div className="p-3 md:p-4">

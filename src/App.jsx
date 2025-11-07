@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import Filosofia from './pages/Filosofia'
 import Jornadas from './pages/Jornadas'
 import Produtos from './pages/Produtos'
-import EstudoDeCaso from './pages/EstudoDeCaso'
+import CasoDeSucesso from './pages/CasoDeSucesso'
 import Insights from './pages/Insights'
 import Contato from './pages/Contato'
 import Dashboard from './pages/Dashboard'
@@ -29,7 +29,7 @@ function App() {
         <Route path="/filosofia" element={<Filosofia />} />
         <Route path="/jornadas/*" element={<Jornadas />} />
         <Route path="/produtos/*" element={<Produtos />} />
-        <Route path="/estudo-de-caso" element={<EstudoDeCaso />} />
+        <Route path="/caso-de-sucesso" element={<CasoDeSucesso />} />
         <Route path="/insights" element={<Insights />} />
         <Route path="/insights/por-que-transformacoes-fracassam" element={<TransformacoesFracassam />} />
         <Route path="/insights/diagnostico-cultural-antropologico" element={<DiagnosticoCultural />} />
