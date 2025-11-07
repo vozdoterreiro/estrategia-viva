@@ -643,20 +643,6 @@ function Cultivo() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-secondary to-secondary-dark text-white rounded-xl p-8 text-center mb-8">
-            <div className="flex flex-col md:flex-row items-center justify-around gap-6">
-              <div>
-                <p className="text-sm opacity-80 mb-1">⏱️ Duração</p>
-                <p className="text-2xl font-bold">Programa Anual</p>
-              </div>
-              <div className="hidden md:block w-px h-16 bg-white/30"></div>
-              <div>
-                <p className="text-sm opacity-80 mb-1">💰 Investimento</p>
-                <p className="text-2xl font-bold">A partir de R$ 300.000/ano</p>
-              </div>
-            </div>
-          </div>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="https://wa.me/5521959527189?text=Olá!%20Tenho%20interesse%20no%20Ciclo%20de%20Cultivo"
