@@ -221,7 +221,7 @@ export default function CasoDeSucesso() {
                       className="w-full h-48 md:h-64 object-cover bg-black"
                       preload="metadata"
                     >
-                      <source src="/images/case/depoimento-daua-puri.mp4#t=6" type="video/mp4" />
+                      <source src="/images/case/depoimento-daua-puri.mp4" type="video/mp4" />
                       Seu navegador não suporta vídeo.
                     </video>
                     <div className="p-3 md:p-4">
@@ -236,7 +236,7 @@ export default function CasoDeSucesso() {
                       className="w-full h-48 md:h-64 object-cover bg-black"
                       preload="metadata"
                     >
-                      <source src="/images/case/depoimento-juliana.mp4#t=4" type="video/mp4" />
+                      <source src="/images/case/depoimento-juliana.mp4" type="video/mp4" />
                       Seu navegador não suporta vídeo.
                     </video>
                     <div className="p-3 md:p-4">
@@ -251,7 +251,7 @@ export default function CasoDeSucesso() {
                       className="w-full h-48 md:h-64 object-cover bg-black"
                       preload="metadata"
                     >
-                      <source src="/images/case/depoimento-negrogun.mp4#t=4" type="video/mp4" />
+                      <source src="/images/case/depoimento-negrogun.mp4" type="video/mp4" />
                       Seu navegador não suporta vídeo.
                     </video>
                     <div className="p-3 md:p-4">
